@@ -7,7 +7,8 @@ if(!isset($_SESSION['USER'])) {
 else
 {
     $u = unserialize($_SESSION['USER']);
-    $WelcomeMessage = 'Welcome ';
+    
+    $WelcomeMessage = 'Welcome '.$u->getName(). ' '.$u->getFamily();
 }
 
 require "config.php";

@@ -119,9 +119,9 @@ class user extends person
         while ($row = $result->fetch_array())
         {
             $tempUser = new user();
-            $tempUser->setUsername($row['Username']);
-            $tempUser->setName($row['Name']);
-            $tempUser->setFamily($row['Family']);
+            $tempUser->setUsername($row['username']);
+            $tempUser->setName($row['name']);
+            $tempUser->setFamily($row['family']);
             $usersList[$i++] = $tempUser->jsonSerialize();
         }
         
