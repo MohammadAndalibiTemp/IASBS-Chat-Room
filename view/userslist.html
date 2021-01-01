@@ -116,12 +116,16 @@ table tr:nth-child(even) {
                     <th>Username</th>
                     <th>Name</th>
                     <th>Family</th>
+                    <th> </th>
                 </tr>
 
                 <tr ng-repeat="r in lst | filter : paginate | filter : searchData">
-                    <td><a class="width100">{{r.username}}</a></td>
+                    <td><input type="submit" name="sender" value="{{r.username}} " ></td>
+                   <!--  <td><a class="width100">{{r.username}}</a></td>-->
                     <td><a class="width100">{{r.name}}</a></td>
                     <td><a class="width100">{{r.family}}</a></td>
+                    
+                    
                 </tr>
 
             </table>
