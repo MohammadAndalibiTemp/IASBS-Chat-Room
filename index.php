@@ -12,7 +12,7 @@ if(isset($_POST['uiLogin']))
     $u = new user();
     $u->setUsername($_POST['uiUsername']);
     $u->setPassword($_POST['uiPassword']);
-
+    
     if($u->checkUserPass())
     {
         $_SESSION['USER'] = serialize($u);

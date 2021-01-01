@@ -1,7 +1,8 @@
 .Section
 {
     position:relative;
-    height: 200px;
+    height: 300px;
+    border:1px solid black;
 }
 
 .Menu
@@ -9,15 +10,86 @@
     position:absolute;
     left:0px;
     width:30%;
-    height:200px;
-    border: 1px solid black;
+    height:300px;
+    border:1px solid black;
 }
 
 .Content
 {
     position:absolute;
     right:0px;
-    width:70%;
+    width:68%;
     height:200px;
+    padding-top: 10px;
+}
 
+.form-control {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    font-size: 13px !important;
+    font-weight: 300;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+}
+.form-control:focus, .form-control:active {
+    box-shadow: none;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+
+.pagination {
+    width: 100%;
+    margin: 10px 0px;
+}
+.pagination > li
+{
+    display: inline-block;
+}
+.pagination > li > a,
+.pagination > li > span {
+    margin-left: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #656d78;
+    border-color: #E5E5E5;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    color: #222;
+}
+.pagination > li.active > a,
+.pagination > li.active > a:hover {
+    background: #1e293d;
+    color: #FFF;
+    border-color: #1e293d;
+}
+.pagination.pagination-sm {
+    margin: 0px;
+    width: auto;
+}
+.pagination.pagination-sm.push-down-20 {
+    margin-bottom: 20px;
+}
+.pagination.pagination-sm.push-up-20 {
+    margin-top: 20px;
+}
+
+
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
 }

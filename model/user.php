@@ -5,7 +5,7 @@ abstract class person
     public $name;
     public $family;
 
-    function getName()
+    public function getName()
     {
         return $this->name;
     }
@@ -73,8 +73,8 @@ class user extends person
         if(mysqli_num_rows($result) > 0)
         {
             $row = $result->fetch_array();
-            $this->setName($row["Name"]);
-            $this->setFamily($row["Family"]);
+            $this->setName($row["name"]);
+            $this->setFamily($row["family"]);
             return true;
         }
         return false;
@@ -124,6 +124,7 @@ class user extends person
             $tempUser->setFamily($row['Family']);
             $usersList[$i++] = $tempUser->jsonSerialize();
         }
+        
         return $usersList;
     }
 }
