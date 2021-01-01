@@ -30,6 +30,7 @@ class user extends person
 {
     private $username;
     private $password;
+    private $email;
 
     function getUsername()
     {
@@ -54,6 +55,15 @@ class user extends person
             $this->password = $password;
     }
 
+    function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
     function checkUserPass()
     {
         $paramTypes = "ss";
@@ -96,5 +106,24 @@ class user extends person
             return true;
         }
         return false;
+    }
+    public function jsonSerialize(){
+        return get_object_vars($this);
+    }
+
+    public static function GetAllUsers()
+    {
+        $result = database::ExecuteQuery('GetAllUsers');
+        $usersList = array();
+        $i = 0;
+        while ($row = $result->fetch_array())
+        {
+            $tempUser = new user();
+            $tempUser->setUsername($row['Username']);
+            $tempUser->setName($row['Name']);
+            $tempUser->setFamily($row['Family']);
+            $usersList[$i++] = $tempUser->jsonSerialize();
+        }
+        return $usersList;
     }
 }

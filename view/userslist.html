@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="css/Page.css">
+
+<script src="js/angular/angular.js"></script>
+<script src="js/jquery/jquery.js"></script>
+<script src="js/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+<script src="js/userlist.js"></script>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/jquery/jquery-ui.min.js"></script>
+<script src="js/angular/angular-resource.js"></script>
+
+
+
+<div class="Content">
+    <div ng-app="UsersListApp">
+        <input type="text" placeholder="Search..." ng-model="searchData" class="form-control" />
+        <!--<input type="text" placeholder="Search on Name" ng-model="searchData.name" class="form-control" />-->
+        <div ng-controller="UsersListController">
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Family</th>
+                </tr>
+
+                <tr ng-repeat="r in lst | filter : paginate | filter : searchData">
+                    <td><a class="width100">{{r.username}}</a></td>
+                    <td><a class="width100">{{r.name}}</a></td>
+                    <td><a class="width100">{{r.family}}</a></td>
+                </tr>
+
+            </table>
+            <div style="text-align:center" ng-show="showLoader">
+                Loading...
+            </div>
+            <pagination total-items="totalItems" ng-model="currentPage"
+                        max-size="5" boundary-links="true"
+                        items-per-page="numPerPage" class="pagination-sm">
+            </pagination>
+            <p>Total number of users: {{totalItems}}</p>
+
+        </div>
+    </div>
+
+</div>
