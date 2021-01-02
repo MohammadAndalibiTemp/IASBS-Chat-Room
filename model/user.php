@@ -128,3 +128,60 @@ class user extends person
         return $usersList;
     }
 }
+
+class message{
+    public $index;
+    public $sender;
+    public $reciver;
+    public $date;
+    public $msg;
+    
+    public function getIndex()
+    {
+        return $this->index;
+    }
+
+    function setIndex($index)
+    {
+        $this->index = $index;
+    }
+
+    function getSender()
+    {
+        return $this->sender;
+    }
+
+    function setSender($sender)
+    {
+        $this->sender = $sender;
+    }
+
+    function getReciver()
+    {
+        return $this->reciver;
+    }
+    function setReciver($reciver)
+    {
+        $this->reciver = $reciver;
+    }
+
+    function getDate()
+    {
+        return $this->date;
+    }
+
+    function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    function getMsg()
+    {
+        return $this->msg;
+    }
+
+    function setMsg($msg)
+    {
+        $this->msg = $msg;
+    }
+}
