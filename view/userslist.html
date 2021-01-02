@@ -109,18 +109,18 @@ table tr:nth-child(even) {
 <div class="Content">
     <div ng-app="UsersListApp">
         <input type="text" placeholder="Search..." ng-model="searchData" class="form-control" />
-        <!--<input type="text" placeholder="Search on Name" ng-model="searchData.name" class="form-control" />-->
+        <form method="POST" action="chat.php">
         <div ng-controller="UsersListController">
             <table>
                 <tr>
                     <th>Username</th>
                     <th>Name</th>
                     <th>Family</th>
-                    <th> </th>
+                    
                 </tr>
 
                 <tr ng-repeat="r in lst | filter : paginate | filter : searchData">
-                    <td><input type="submit" name="sender" value="{{r.username}} " ></td>
+                    <td><input type="submit" name="reciver" value="{{r.username}} " ></td>
                    <!--  <td><a class="width100">{{r.username}}</a></td>-->
                     <td><a class="width100">{{r.name}}</a></td>
                     <td><a class="width100">{{r.family}}</a></td>
@@ -137,6 +137,7 @@ table tr:nth-child(even) {
             <p>Total number of users: {{totalItems}}</p>
 
         </div>
+    </form>
     </div>
 
 </div>
