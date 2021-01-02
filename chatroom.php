@@ -14,14 +14,10 @@ if($_POST["ui_chatbox"]!=""){
     $reciver = $_SESSION['reciver'];
     $Msg = $_POST["ui_chatbox"];
     $date = date("Y-m-d H:i:s");
-    $Query = "INSERT INTO chat(`sender`, `reciver`,`date`, `msg`) VALUES ('".$sender."','".$reciver."','".$date."','".$Msg."')";
-    $connection = database::ConnectToDB();
-    $result = mysqli_query($connection, $Query);
-    if(!$result)
-            die(mysqli_error($connection));
-    mysqli_close($connection);
 
-    
+    $paramTypes = "ssss";
+    $Parameters = array($sender,$reciver,$date,$Msg);
+    database::ExecuteQuery('sendMsg', $paramTypes, $Parameters);
     
 }
 
