@@ -1,25 +1,26 @@
-<div class="Content">
-    <div class="loginContainer">
-        <span><?php echo $Message; ?></span>
+<div class="Content" style="background-color:#23488E;  border-width: 0.4em; border-color:#062358 ;">
+    <div class="loginContainer" style="border-width: 0em;">
+        <span style="color: white;"><?php echo $Message; ?></span>
         <form action="register.php" method="post">
-            <div class="container">
-                <label>Name</label>
-                <input type="text" placeholder="Enter Name" name="uiName" value="<?php echo $uiName_cv; ?>">
+            <div  >
+                <label style="font-family:verdana; color: white">&nbsp;Name</label>
+                <input type="text" placeholder="Enter Name" name="uiName" style="font-family:verdana;" value="<?php echo $uiName_cv; ?>">
 
-                <label>Family</label>
-                <input type="text" placeholder="Enter family" name="uiFamily" value="<?php echo $uiFamily_cv; ?>">
+                <label style="font-family:verdana; color: white">&nbsp;Family</label>
+                <input type="text" placeholder="Enter family" name="uiFamily" style="font-family:verdana;" value="<?php echo $uiFamily_cv; ?>">
 
-                <label>Username</label>
-                <input type="text" placeholder="Enter Username" name="uiUsername" value="<?php echo $uiUsername_cv; ?>">
+                <label style="font-family:verdana; color: white">&nbsp;Username</label>
+                <input type="text" placeholder="Enter Username" name="uiUsername" style="font-family:verdana;"  value="<?php echo $uiUsername_cv; ?>">
 
-                <label>Password</label>
-                <input type="password" placeholder="Enter Password" name="uiPassword">
+                <label style="font-family:verdana; color: white">&nbsp;Password</label>
+                <input type="password" placeholder="Enter Password" name="uiPassword" style="font-family:verdana;">
 
-                <label>Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" name="uiConfirmPassword">
+                <label style="font-family:verdana; color: white">&nbsp;Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" name="uiConfirmPassword" style="font-family:verdana;">
 
-                <button type="submit" name="uiRegister">Register</button>
-                <a href="index.php">Login</a>
+                <button type="submit" name="uiRegister" style="background-color: darkorange;font-family:verdana; font-size: larg;">Register</button>
+                <button type="button" style="color:white;  background-color:rgba(255, 0, 0, 0.815);font-family:verdana; font-size: larg;"><a href="index.php" style="color: white;">Login</a></button>
+                
             </div>
         </form>
     </div>

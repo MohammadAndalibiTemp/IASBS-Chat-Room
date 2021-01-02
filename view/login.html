@@ -1,16 +1,18 @@
-<div class="Content">
-    <div class="loginContainer">
-        <span><?php echo $Message; ?></span>
+
+<div class="Content" style="background-color:#23488E;  border-width: 0.5em; border-color:#23488E ;">
+    <div class="loginContainer" style="border-width: 0em;">
+        <span style="color: white; font-family:verdana;"><?php echo $Message; ?></span>
         <form action="index.php" method="post">
-            <div class="container">
-                <label>Username</label>
-                <input type="text" placeholder="Enter Username" name="uiUsername">
+            <div  style="background-color:#23488E;">
+                <label style="font-family:verdana; color: white">&nbsp;Username</label>
+                <input type="text" placeholder="Enter Username" name="uiUsername" style="font-family:verdana;">
 
-                <label>Password</label>
-                <input type="password" placeholder="Enter Password" name="uiPassword">
+                <label style="font-family:verdana ; color: white;" >&nbsp;Password</label>
+                <input type="password" placeholder="Enter Password" name="uiPassword" style="font-family:verdana">
 
-                <button type="submit" name="uiLogin">Login</button>
-                <a href="register.php">Register</a>
+                <button type="submit" name="uiLogin" style="background-color: darkorange;font-family:verdana; font-size: larg;">Login</button>
+                <!-- <a href="register.php">Register</a> -->
+                <button type="button" style="color:white;  background-color:rgba(255, 0, 0, 0.815);font-family:verdana; font-size: larg;"><a href="register.php" style="color: white;">Register</a></button>
             </div>
         </form>
     </div>
