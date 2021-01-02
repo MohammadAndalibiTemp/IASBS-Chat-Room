@@ -50,7 +50,33 @@ function validation()
         $Message .= 'Enter your password'."<br/>";
 
     if($_POST["uiPassword"] != $_POST["uiConfirmPassword"])
-        $Message .= 'Password and confirmation password do not match.'."<br/>";
+         $Message .= 'Password and confirmation password do not match.'."<br/>";
+
+    if ($_POST["uiName"].length > 50){        
+        $Message .= " your name should be less than 50 characters <br/>";}
+    if ($_POST["uiFamily"].length > 50){        
+        $Message .= " your family should be less than 50 characters <br/>";}
+    if ($_POST["uiName"].length < 3){        
+        $Message .= " your name should be more than 3 characters <br/>";}
+    if ($_POST["uiFamily"].length < 3){        
+        $Message .= " your family should be more than 3 characters <br/>";}
+    if ($_POST["uiUsername"].length < 3){        
+        $Message .= " your Username should be more than 3 characters <br/>";}
+    if ($_POST["uiUsername"].length < 50){        
+        $Message .= " your Username should be less than 50 characters <br/>";}
+    if ($_POST["uiPassword"].length < 5){        
+        $Message .= " your password is not strong enough so it should be more than 5 characters <br/>";}
+    if ($_POST["uiPassword"].length > 50){        
+        $Message .= " your password should be less than 50 characters <br/>";}
+    
+    // var re =/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    // if (!re.test(event)){
+    //      errorMessage += " your Email is not valid <br/>";}
+
+
+
+
+
 
     return $Message;
 }
