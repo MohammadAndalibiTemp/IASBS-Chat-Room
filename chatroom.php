@@ -8,7 +8,8 @@ if(!isset($_SESSION['USER'])) {
 
 #if(!isset($_POST["ui_send"]))
 #    return;
-if($_POST["ui_chatbox"]!=""){
+
+if(isset($_POST['ui_send'])){
     $u = unserialize($_SESSION['USER']);
     $sender = $u->getUsername();
     $reciver = $_SESSION['reciver'];
@@ -21,11 +22,9 @@ if($_POST["ui_chatbox"]!=""){
     
 }
 
-include $ShareFolderPath."header.html";
+
 include $ViewPath."chatroom.html";
 
-
-include $ShareFolderPath."footer.html";
 
 
 ?>
