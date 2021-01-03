@@ -121,7 +121,7 @@ table tr:nth-child(even) {
 
                 <tr ng-repeat="r in lst | filter : paginate | filter : searchData">
                     <td><input type="submit" name="reciver" value="{{r.username}} " ></td>
-                   <!--  <td><a class="width100">{{r.username}}</a></td>-->
+                   
                     <td><a class="width100">{{r.name}}</a></td>
                     <td><a class="width100">{{r.family}}</a></td>
                     
@@ -134,7 +134,7 @@ table tr:nth-child(even) {
             </div>
             <pagination total-items="totalItems" ng-model="currentPage" max-size="5" boundary-links="true" items-per-page="numPerPage" class="pagination-sm">
             </pagination>
-            <p>Total number of users: {{totalItems}}</p>
+            
 
         </div>
     </form>

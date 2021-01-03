@@ -3,8 +3,9 @@ session_start();
 unset($_SESSION['USER']);
 require "config.php";
 require "model/user.php";
+
 include $ShareFolderPath."header.html";
-//include $ShareFolderPath."menu.html";
+
 
 $Message = '';
 if(isset($_POST['uiLogin']))

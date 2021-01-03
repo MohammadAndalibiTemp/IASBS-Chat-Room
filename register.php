@@ -62,7 +62,7 @@ function validation()
         $Message .= " your family should be more than 3 characters <br/>";}
     if (strlen($_POST["uiUsername"]) < 3){        
         $Message .= " your Username should be more than 3 characters <br/>";}
-    if (strlen($_POST["uiUsername"]) < 50){        
+    if (strlen($_POST["uiUsername"]) > 50){        
         $Message .= " your Username should be less than 50 characters <br/>";}
     if (strlen($_POST["uiPassword"]) < 5){        
         $Message .= " your password is not strong enough so it should be more than 5 characters <br/>";}
