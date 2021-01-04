@@ -6,8 +6,13 @@ if(!isset($_SESSION['USER'])) {
     header('Location: index.php');
 }
 
-#if(!isset($_POST["ui_send"]))
-#    return;
+$t = unserialize($_SESSION['USER']);
+$msgList =$t->GetAllMsg();
+$ML = '';
+#foreach($msgList as $temp1){
+#    $ML .= $temp1->getmsg.'\n';
+#}
+
 
 if(isset($_POST['ui_send'])){
     $u = unserialize($_SESSION['USER']);
