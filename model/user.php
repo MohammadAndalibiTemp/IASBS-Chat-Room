@@ -127,6 +127,23 @@ class user extends person
         
         return $usersList;
     }
+    public  function GetAllMsg(){
+        $count = 0;
+        $paramTypes = "s";
+        $Parameters = array( $this->username  );
+    
+        $msg_query = database::ExecuteQuery('seeMsg',$paramTypes,$Parameters);
+        $msgs = array();
+        while($temp = $msg_query ->fetch_array()){
+            $new_msg = new message();
+            $new_msg->setSender($temp['sender']);
+            $new_msg->setReciver($temp['reciver']);
+            #$new_msg->setDate($temp['date']);
+            $new_msg->setMsg($temp['msg']);
+            $msgs[$count++] = $new_msg;
+        }
+        return $msgs;
+    }
 }
 
 class message{
@@ -184,4 +201,5 @@ class message{
     {
         $this->msg = $msg;
     }
+    
 }
