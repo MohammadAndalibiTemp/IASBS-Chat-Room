@@ -1,20 +1,78 @@
 <html>
+<html>
+	<link rel="stylesheet" href="css/Style.css">
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/loaddata.js"></script>
 
+</html>
 <body style="background-color: #8a99b42a;">
 	
 <div class="header" style=" border-radius: 4pc;	text-align: center;color: white; background-color: #23488E; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif; font-size: 10mm;">IASBS-Chat-Room</div>
-<div class="header" style="	width: 48%; position: absolute;left: 26.5%;top: 8%;	border-radius: 4pc; text-align: center;color: white; background-color: #8a99b4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif; font-size: 8mm;">Username: Fallen</div>
+<div class="header" style="	width: 48%; position: absolute;left: 26.5%;top: 8%;	border-radius: 4pc; text-align: center;color: white; background-color: #8a99b4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif; font-size: 8mm;"></div>
 
 <div  style=" background-image: url(https://www.itl.cat/pngfile/big/119-1190190_worlds-okayest-bard-i-made-a-d-d.png) ; border-radius: 4pc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height:5000px; width: 50%; position: absolute;left: 25%;top: 14%;	;border: 10px solid rgb(34, 28, 121);">
+	
+	<!--<?php echo $msgList; ?>
+	-->
+		
+	
 	<p>&nbsp;</p>
+	
+	<div ng-app="myApp" ng-controller="myController">
+			
+		<div ng-repeat="x in lst">
+			if 	()
+			if 
+				<p>{{ x.sender }}</p>	
+				{{ x.reciver }}
+				{{ x.msg }}
+			
+		</div>
+	
+	</div>
+	
+	<p>&nbsp;</p>
+
 	<div style=" border-radius: 4pc; background-color: #23488E; color: white;  padding: 12px 10px; display: block; float: left;">
-		<span>sdfghjklkjhgfdsfghj</span>
-	  </div>
-	  <p>&nbsp;</p>
-	  <p>&nbsp;</p>
-	  <div style="border-radius: 4pc;background-color: darkorange; color: white; padding: 12px 10px ; display: block; float: right;">
-		<span>sdfghjfghsdfghjfghsdfghjfghsdfghjfghsdfghjfghsdfghe</span>
-	  </div>
+		<span>Dear Suresh! Who is addressing the meeting?</span>
+    </div>
+      
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+	<div style="border-radius: 4pc;background-color: darkorange; color: white; padding: 12px 10px ; display: block; float: right;">
+		<span>He is the MLA of the congress party.</span>
+	</div>
+
+
+
+	<p>&nbsp;</p>
+
+	<div style=" border-radius: 4pc; background-color: #23488E; color: white;  padding: 12px 10px; display: block; float: left;">
+		<span>When is the election held?</span>
+    </div>
+      
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+	<div style="border-radius: 4pc;background-color: darkorange; color: white; padding: 12px 10px ; display: block; float: right;">
+		<span>On Sunday the 12th March.</span>
+	</div>
+
+	<p>&nbsp;</p>
+
+	<div style=" border-radius: 4pc; background-color: #23488E; color: white;  padding: 12px 10px; display: block; float: left;">
+		<span>How many candidates are contesting?</span>
+    </div>
+      
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+	<div style="border-radius: 4pc;background-color: darkorange; color: white; padding: 12px 10px ; display: block; float: right;">
+		<span>There are seven candidates in the field.</span>
+	</div>
+
+
 
 </div>
 
